@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --build-from-source
+RUN npm install
 RUN node -e "require('@napi-rs/canvas')"
 COPY . .
 
